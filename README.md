@@ -21,7 +21,14 @@ Browse your wardrobe, preview cosmetics on a 3D player mannequin, manage equippe
 
 ## Screenshots
 
-*Coming soon.*
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/5a3ed4b4-fa14-40df-b3b1-5947f31d5c5c" />
+
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/387d108f-38ff-43e4-9427-73d8cf512b03" />
+
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/6b6b2c79-9a5b-427f-9651-50d0cb5f0b3b" />
+
+<img width="1680" height="1050" alt="image" src="https://github.com/user-attachments/assets/519b562c-66ad-4a81-9ccd-baa4b2ae6b79" />
+
 
 ## Compatibility
 
