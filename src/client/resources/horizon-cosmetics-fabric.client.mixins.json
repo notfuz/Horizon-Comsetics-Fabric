@@ -1,0 +1,20 @@
+{
+	"required": true,
+	"package": "fuz.horizoncosmetics.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"OptionsScreenMixin",
+		"ScreenAccessor",
+		"OptionsAccessor",
+		"ModelPartAccessor",
+		"PlayerSkinWidgetAccessor",
+		"AvatarRendererMixin",
+		"LivingEntityRendererAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

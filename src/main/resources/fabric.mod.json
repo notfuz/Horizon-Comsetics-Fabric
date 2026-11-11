@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "horizon-cosmetics-fabric",
+	"version": "${version}",
+	"name": "Horizon Cosmetics Fabric",
+	"description": "Client-side integration for Horizon-owned cosmetics on Fabric 26.3.",
+	"authors": [
+		"Horizon Cosmetics Fabric contributors"
+	],
+	"contact": {
+		"sources": "https://github.com/horizon-rust/horizon"
+	},
+	"license": "MIT",
+	"icon": "assets/horizon-cosmetics-fabric/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"fuz.horizoncosmetics.HorizonCosmeticsFabric"
+		],
+		"client": [
+			"fuz.horizoncosmetics.client.HorizonCosmeticsFabricClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "horizon-cosmetics-fabric.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
