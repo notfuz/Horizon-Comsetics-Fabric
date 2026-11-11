@@ -68,15 +68,19 @@ public final class EmoteWheelScreen extends Screen {
 	public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
 		int centerX = this.width / 2;
 		int centerY = this.height / 2;
-		int radius = Math.min(130, Math.max(82, Math.min(this.width, this.height) / 3));
+		// Same radius/button-width math as init(), so the backdrop always encloses the buttons.
+		double ringRadius = Math.min(115, Math.max(72, Math.min(this.width, this.height) * 0.25));
+		int buttonWidth = Math.min(132, Math.max(92, this.width / 7));
+		int halfWidth = (int) Math.round(ringRadius) + buttonWidth / 2 + 12;
+		int halfHeight = (int) Math.round(ringRadius) + 10 + 12;
 		graphics.fill(0, 0, this.width, this.height, 0xA60B0E15);
-		graphics.fill(centerX - radius, centerY - radius, centerX + radius, centerY + radius, 0x80171B28);
-		graphics.outline(centerX - radius, centerY - radius, centerX + radius, centerY + radius, ACCENT);
+		graphics.fill(centerX - halfWidth, centerY - halfHeight, centerX + halfWidth, centerY + halfHeight, 0xCC171B28);
+		graphics.outline(centerX - halfWidth, centerY - halfHeight, halfWidth * 2, halfHeight * 2, ACCENT);
 		graphics.centeredText(this.font, Component.literal(emotes.isEmpty()
 						? "No owned emotes" : "Choose an emote"),
-				centerX, centerY - 5, INK);
+				centerX, centerY - 4, INK);
 		graphics.centeredText(this.font, Component.literal("Click an emote \u00b7 Esc to cancel"),
-				centerX, centerY + radius + 16, MUTED);
+				centerX, centerY + halfHeight + 8, MUTED);
 		super.extractRenderState(graphics, mouseX, mouseY, partialTick);
 	}
 
